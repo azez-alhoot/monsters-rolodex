@@ -6,4 +6,4 @@ before_install:
   - docker build -t azeezalhoot/monster-rolodex -f Dockerfile.dev .
 
 script:
-  - docker run azeezalhoot/monster-rolodex npm run test -- --coverage
+  - docker run azeezalhoot/monster-rolodex npm run test -- --coverage && echo "Tests passed" || (echo "Tests failed" && exit 1)
