@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t azeezalhoot/monster-rolodex -f Dockerfile.dev .
+
+script:
+  - docker run azeezalhoot/monster-rolodex npm run test -- --coverage
